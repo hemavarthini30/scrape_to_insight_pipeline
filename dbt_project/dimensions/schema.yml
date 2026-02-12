@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: dim_companies
+    description: "Dimension table containing unique companies"
+    columns:
+      - name: company_sk
+        description: "Surrogate key for company"
+        tests:
+          - not_null
+          - unique
+
+      - name: symbol
+        description: "Stock ticker symbol"
+        tests:
+          - not_null
+          - unique

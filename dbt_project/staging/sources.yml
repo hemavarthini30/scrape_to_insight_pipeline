@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: raw
+    database: SCRAPE_PIPELINE
+    schema: RAW
+    tables:
+      - name: nasdaq_stocks_raw
+        description: "Raw NASDAQ stock data loaded into Snowflake"

@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: dim_companies
+    columns:
+      - name: company_sk
+        tests:
+          - not_null
+          - unique
+
+      - name: symbol
+        tests:
+          - not_null
+
+  - name: fct_stock_observations
+    columns:
+      - name: company_sk
+        tests:
+          - not_null

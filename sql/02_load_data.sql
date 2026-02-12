@@ -1,0 +1,2 @@
+-- Data loaded using Snowflake UI (COPY INTO internal stage)
+-- Included for documentation completeness

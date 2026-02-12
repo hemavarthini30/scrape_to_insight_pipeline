@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: fct_stock_observations
+    description: "Fact table containing stock price observations"
+    columns:
+      - name: company_sk
+        description: "Foreign key to dim_companies"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_companies')
+              field: company_sk
+
+      - name: price
+        description: "Observed stock price"
+        tests:
+          - not_null
+
+      - name: observation_date
+        description: "Date of observation"
+        tests:
+          - not_null
